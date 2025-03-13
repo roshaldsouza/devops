@@ -1,0 +1,8 @@
+applications:
+  - name: my-app
+    memory: 256M
+    instances: 1
+    random-route: true
+    buildpack: python_buildpack  # Using Python buildpack
+    command: gunicorn app:app    # Modify based on your framework (Flask/Django)
+    path: .                      # Directory where your app is located
